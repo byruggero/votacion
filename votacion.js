@@ -5,7 +5,7 @@ if (Meteor.isClient) { // detectamos si se trata del cliente
   Template.list.frameworks = function () { //traemos la lista de los frameworks
     return Frameworks.find({}, {sort : {score: -1, name: 1}});
   };
-  //logica para agreagr Frameworks
+  //logica para agregar Frameworks
   Template.addFramework.events({
     'click button' : function (e) {//cuando le damos click al boton
       var value = $('#f-name').val();
